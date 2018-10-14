@@ -1,0 +1,2 @@
+let someVal : number = 13;
+let result : number = someVal - 20;

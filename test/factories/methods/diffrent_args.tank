@@ -1,0 +1,5 @@
+explode(a : number) {
+  
+}
+
+explode(false);

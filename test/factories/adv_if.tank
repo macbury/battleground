@@ -1,0 +1,16 @@
+let exp : boolean = true;
+if (false) {
+  exp = false;
+}
+let c : number = 13;
+if (c == 13) {
+  c = c + 1;
+
+  if (c == 14) {
+    c = c + 1;
+
+    if (c == 1000) {
+      c = c + 1;
+    }
+  }  
+}

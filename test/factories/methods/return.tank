@@ -1,0 +1,7 @@
+let hello : number;
+
+test() : number {
+  return 1000;
+}
+
+hello = test();

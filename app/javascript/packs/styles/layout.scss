@@ -1,0 +1,191 @@
+$button-size: 100px;
+$accent-color: rgb(0, 188, 140);
+$background-base-color: rgb(34, 34, 34);
+$background-base-dark-color: darken($background-base-color, 2%);
+$button-border-color: rgba(0, 0, 0, 0.2);
+
+.sidebar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-right: 1px solid $button-border-color;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: $button-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  a {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: $button-size;
+    min-height: $button-size;
+    color: #fff;
+    font-size: 13px;
+    border-bottom: 1px solid $button-border-color;
+
+    &.alternative {
+      border-bottom: 0px;
+      border-top: 1px solid $button-border-color;
+      margin-top: auto;
+    }
+
+    svg {
+      margin-bottom: 8px;
+      width: 32px !important;
+      height: 32px !important;
+      display: block;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.1);
+
+      img {
+        opacity: 0.6;
+      }
+    }
+
+    &.active, &:active {
+      background-color: rgb(255, 255, 255);
+      color: rgb(34, 34, 34);
+    }
+  }
+}
+
+.content-with-sidebar {
+  & > .container-fluid {
+    overflow: hidden;
+    margin-left: $button-size;
+    width: auto;
+    position: relative;
+    min-height: 100%;
+
+    .Resizer {
+      z-index: 100;
+    }
+  }
+
+  .preview-game {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .react-monaco-editor-container {
+      border-left: 1px solid $background-base-dark-color;
+    }
+
+    .preview-view {
+      flex-grow: 1;
+      overflow: hidden;
+      background-size: 128px 100%;
+      background-repeat: repeat-x;
+      background-image: linear-gradient(
+        -45deg,
+        $button-border-color,
+        $button-border-color 33%,
+        $background-base-color 33%,
+        $background-base-color 66%,
+        $button-border-color 66%,
+        $button-border-color
+      );
+    }
+
+    .preview-toolbar {
+      height: 70px;
+      border-top: 3px solid $accent-color;
+      background-color: $background-base-dark-color;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px 10px;
+    }
+  }
+
+  .preview-editor-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .preview-console {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .preview-console-header {
+      padding: 5px 15px;
+      background-color: $background-base-dark-color;
+      border-top: 1px solid $button-border-color;
+      border-bottom: 1px solid $button-border-color;
+
+      h4 {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+        margin-left: 10px;
+      }
+    }
+
+    .preview-console-content {
+      flex-grow: 1;
+      position: relative;
+
+      .preview-console-scroller {
+        overflow: scroll;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    code {
+      display: block;
+      padding: 5px 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      &:hover {
+        padding-left: 12px;
+        border-left: 3px solid $accent-color;
+      }
+
+      &.important {
+        font-weight: bold;
+        text-align: center;
+        font-size: 15px;
+      }
+
+      &.success {
+        background-color: rgba(115, 227, 73, 0.2);
+        color: #fff;
+      }
+
+      &.error {
+        background-color: rgba(227, 96, 73, 0.15);
+      }
+
+      pre {
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+  }
+}
+
+.monaco-aria-container {
+  display: none;
+}

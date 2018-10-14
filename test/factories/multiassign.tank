@@ -1,0 +1,3 @@
+let test : number = 77;
+let c : number;
+let b : boolean = true;

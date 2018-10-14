@@ -1,0 +1,39 @@
+.game-preview {
+  height: 100%;
+
+  .errors {
+    position: relative;
+    box-sizing: border-box;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(232, 232, 232);
+    font-family: Menlo, Consolas, monospace;
+    font-size: large;
+    padding: 2rem;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    overflow: auto;
+    z-index: 2;
+
+    h2 {
+      color: #E36049;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .gameplay {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+
+    pre {
+      color: rgb(232, 232, 232);
+    }
+  }
+}

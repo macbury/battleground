@@ -1,0 +1,10 @@
+max(a : number, b : number) : number {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+let t : number = max(10, 20);
+let c : number = max(30, t);

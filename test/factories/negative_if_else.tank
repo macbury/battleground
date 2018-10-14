@@ -1,0 +1,7 @@
+let exp : number = 1;
+
+if (false) {
+  exp = 2;
+} else {
+  exp = 3;
+}

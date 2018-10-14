@@ -1,0 +1,4 @@
+enklawa() : text {
+  return "Wot";
+}
+message(enklawa);

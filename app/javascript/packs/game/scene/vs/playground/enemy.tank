@@ -1,0 +1,11 @@
+loop {
+  if (not move(5)) {
+    turn(-90);
+  }
+  fire();
+  turn(-45);
+  fire();
+  turn(45);
+  fire();
+  turn(45);
+}

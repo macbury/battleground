@@ -1,0 +1,1 @@
+let precedenceResult : number = 1 + 2 * 3 / 6 - 4;

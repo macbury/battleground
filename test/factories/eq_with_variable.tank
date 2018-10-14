@@ -1,0 +1,2 @@
+let other : number = 10;
+let isEq : boolean = 10 == other;

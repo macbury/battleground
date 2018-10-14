@@ -1,0 +1,8 @@
+
+
+let myVal : number = 1000;
+
+myVal = 1234;
+myVal = 1234;
+myVal = false;
+

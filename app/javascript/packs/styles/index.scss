@@ -1,0 +1,34 @@
+@import "_variables.scss";
+@import "~bootstrap/scss/bootstrap";
+@import "_bootswatch.scss";
+
+@import "resizer";
+@import "game";
+@import "editor";
+@import "layout";
+
+body, html, #root, #root > div {
+  height: 100%;
+}
+
+.error-content {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.error-glyph {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.fullscreen-editor {
+  display: flex;
+  flex: 1 1;
+  height: 100%;
+
+  .SplitPane {
+    position: relative !important;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+}

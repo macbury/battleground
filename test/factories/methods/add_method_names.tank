@@ -1,0 +1,5 @@
+enklawa() : text {
+  return "Wot";
+}
+
+let t : text = enklawa + "s";

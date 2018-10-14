@@ -1,0 +1,5 @@
+test(a : number, b : number) {
+  
+}
+
+test(1,2,3,4,5);

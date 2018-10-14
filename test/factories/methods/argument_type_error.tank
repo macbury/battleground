@@ -1,0 +1,6 @@
+example(content : text, c : number) : text {
+  let a = 2000;
+  let d : number = (a + c);
+}
+
+example("Hello", 5000);

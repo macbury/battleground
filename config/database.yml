@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 25 } %>
+
+development:
+  <<: *default
+  database: battleground_development
+  min_messages: debug1
+
+test:
+  <<: *default
+  database: battleground_test
+
+production:
+  <<: *default
+
+staging:
+  <<: *default  
+  database: battleground_staging

@@ -1,0 +1,14 @@
+TankAssembly {
+  Instructions = Instruction*
+  Instruction  = label? operation Values br?
+  Values       = ListOf<value, ",">
+  number       = digit+
+  textParen    = "\""
+  text         = textParen textContent* textParen
+  textContent  = ~textParen any
+  boolean      = ("true" | "false")
+  value        = (text | number | label)
+  label        = "." (letter | digit)
+  operation    = letter+
+  br           = end
+}

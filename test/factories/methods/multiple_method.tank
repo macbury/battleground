@@ -1,0 +1,15 @@
+let result : boolean = false;
+
+b() {
+  result = true;
+}
+
+c() {
+  b();
+}
+
+a() {
+  c();
+}
+
+a();

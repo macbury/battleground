@@ -1,0 +1,12 @@
+let result : number = 0;
+
+incTest() {
+  result = result + 1;
+}
+
+incTest();
+incTest();
+incTest();
+incTest();
+incTest();
+incTest();

@@ -1,0 +1,4 @@
+let exp : boolean = true;
+if (true) {
+  exp = false;
+}

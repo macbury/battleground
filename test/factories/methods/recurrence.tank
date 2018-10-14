@@ -1,0 +1,10 @@
+let times : number = 0;
+
+recurrence(left : number) {
+  times = times + 1;
+  if (left > 0) {
+    recurrence(left-1);
+  }
+}
+
+recurrence(10);
